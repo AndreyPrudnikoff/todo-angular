@@ -1,0 +1,19 @@
+<div>
+  <ul class="cards">
+    <li *ngFor="let todo of todoService.todos; let i = index">
+      <div [class.done]="todo.completed">
+        <div class="flex">
+          <p>
+            <input type="checkbox" [checked]="todo.completed" (change)="onChange(todo.id)">
+            <strong>{{i + 1}}</strong>
+          </p>
+          <h2 class="head">{{ todo.title | uppercase }}</h2>
+          <button class="remove" (click)="removeTodo(todo.id)">&times;</button>
+        </div>
+        <p>{{ todo.description }}</p>
+      </div>
+
+
+    </li>
+  </ul>
+</div>

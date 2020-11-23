@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1em;
+  text-align: left;
+  input,
+  textarea,
+  button{
+    padding: 5px;
+    font-family: inherit;
+    font-size: 16pt;
+    border-radius: 5px;
+  }
+  input:focus,
+  textarea:focus {
+    outline-color: #3b8ee7;
+  }
+  button {
+    cursor: pointer;
+    background: #3b8ee7;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px silver;
+    transition: all .2s;
+    border: #3b8ee7;
+  }
+  button:active {
+    transform: scale(.99);
+    box-shadow: none;
+  }
+  button:focus {
+    outline: none;
+  }
+}
+
